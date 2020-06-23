@@ -33,6 +33,9 @@ public class WordViewModel extends AndroidViewModel {
     void deleteAllWords() {
         wordRepository.deleteAllWords();
     }
+    LiveData<List<Word>> findWordsWithPatten(String patten){
+        return wordRepository.findWordsWithPatten(patten);
+    }
 
 
 }

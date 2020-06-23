@@ -33,9 +33,12 @@ class WordRepository {
         new DeleteAllAsyncTask(wordDao).execute();
     }
 
-
     LiveData<List<Word>> getAllWordsLive() {
         return allWordsLive;
+    }
+
+    LiveData<List<Word>> findWordsWithPatten(String patten){
+        return wordDao.findWordsWithPatten("%"+patten+"%");
     }
 
     static class InsertAsyncTask extends AsyncTask<Word, Void, Void> {
