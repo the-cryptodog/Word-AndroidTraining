@@ -56,13 +56,13 @@ public class AddFragment extends Fragment {
         et_Chinese = activity.findViewById(R.id.et_chinese);
         wordViewModel = new ViewModelProvider(activity).get(WordViewModel.class);
 
-        //默認按鈕暫時不可按
+        /*默認按鈕暫時不可按*/
         buttonAdd.setEnabled(false);
 
-        //聚焦editTextEnglish
+        /*聚焦editTextEnglish*/
         et_English.requestFocus();
 
-        //用InputMethodManager來show鍵盤，並專注在et_English上。
+        /*用InputMethodManager來show鍵盤，並專注在et_English上。*/
         InputMethodManager imm = (InputMethodManager)activity.getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.showSoftInput(et_English,0);
 
@@ -74,7 +74,7 @@ public class AddFragment extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                //trim() 可以去除頭尾的空白
+                /*trim() 可以去除頭尾的空白*/
                 String english = et_English.getText().toString().trim();
                 String chinese = et_Chinese.getText().toString().trim();
                 buttonAdd.setEnabled(!english.isEmpty() && !chinese.isEmpty());
@@ -97,9 +97,9 @@ public class AddFragment extends Fragment {
                 NavController navController = Navigation.findNavController(view);
                 navController.navigateUp();
 
-//                //用InputMethodManager來hide鍵盤，調用View內的getWindowToken()。
-//                InputMethodManager imm = (InputMethodManager)requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-//                imm.hideSoftInputFromWindow(view.getWindowToken(),0);
+                //用InputMethodManager來hide鍵盤，調用View內的getWindowToken()。
+                //InputMethodManager imm = (InputMethodManager)requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                //imm.hideSoftInputFromWindow(view.getWindowToken(),0);
             }
         });
     }

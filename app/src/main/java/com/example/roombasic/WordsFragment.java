@@ -103,7 +103,7 @@ public class WordsFragment extends Fragment {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         switch (item.getItemId()) {
-            //項目一 : 清空數據被點擊
+            /*項目一 : 清空數據被點擊*/
             case R.id.mu_cleardata:
                 AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity());
                 builder.setTitle("清空數據");
@@ -121,7 +121,7 @@ public class WordsFragment extends Fragment {
                 builder.create();
                 builder.show();
                 break;
-            //項目二 : 切換數據被點擊,並把用戶設定存下來
+            /*項目二 : 切換數據被點擊,並把用戶設定存下來*/
             case R.id.mu_switchview:
                 SharedPreferences shp = requireActivity().getSharedPreferences(VIEW_TYPE_SHP, Context.MODE_PRIVATE);
                 boolean isUsingCardView = shp.getBoolean(IS_USING_CARD_VIEW, false);
