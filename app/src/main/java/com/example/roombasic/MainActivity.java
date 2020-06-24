@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         navController= Navigation.findNavController(findViewById(R.id.fragment));
         NavigationUI.setupActionBarWithNavController(this,navController);
-
     }
 
     @Override

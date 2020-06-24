@@ -87,6 +87,8 @@ public class AddFragment extends Fragment {
         };
         et_English.addTextChangedListener(textWatcher);
         et_Chinese.addTextChangedListener(textWatcher);
+
+
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
